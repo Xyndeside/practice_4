@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Новая заявка — Конференции.РФ</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="top" id="top"></header>
+  <main class="wrap narrow">
+    <h1>Новая заявка</h1>
+    <form id="form" class="card" novalidate>
+      <div class="form-error" role="alert"></div>
+      <label class="field"><span>Помещение</span>
+        <select name="roomId"><option value="">Выберите помещение</option></select>
+        <small class="err" data-for="roomId"></small></label>
+      <label class="field"><span>Желаемая дата начала</span>
+        <input name="startDate" type="date">
+        <small class="err" data-for="startDate"></small></label>
+      <fieldset class="field" style="border:0;padding:0;margin:0 0 14px">
+        <span style="display:block;font-weight:600;font-size:.92rem;margin-bottom:5px">Способ оплаты</span>
+        <div class="choice">
+          <label><input type="radio" name="paymentMethod" value="onsite" checked><span>При очном посещении</span></label>
+          <label><input type="radio" name="paymentMethod" value="sbp"><span>Переводом по СБП</span></label>
+        </div>
+        <small class="err" data-for="paymentMethod"></small>
+      </fieldset>
+      <button class="btn btn--block" type="submit">Отправить</button>
+    </form>
+  </main>
+  <div id="toasts" aria-live="polite"></div>
+  <script src="/js/app.js"></script>
+  <script src="/js/new-booking.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Панель администратора — Конференции.РФ</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="top" id="top"></header>
+  <main class="wrap">
+    <div class="page-head"><h1>Панель администратора</h1></div>
+    <form class="filters" id="filters" onsubmit="return false">
+      <label><span>Поиск по клиенту</span><input id="f-q" type="search" placeholder="ФИО или логин"></label>
+      <label><span>Статус</span>
+        <select id="f-status">
+          <option value="">Все статусы</option>
+          <option>Новая</option>
+          <option>Мероприятие назначено</option>
+          <option>Завершено</option>
+        </select></label>
+      <label><span>Помещение</span>
+        <select id="f-room"><option value="">Все помещения</option></select></label>
+      <button class="btn btn--ghost" type="reset" id="f-reset">Сбросить</button>
+    </form>
+    <p class="counter" id="counter"></p>
+    <div id="list" class="grid grid--3 reveal"></div>
+  </main>
+  <div id="toasts" aria-live="polite"></div>
+  <script src="/js/app.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>
